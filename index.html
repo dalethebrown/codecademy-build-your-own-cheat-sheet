@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dale's Cheat Sheet </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+        <link href="./Resources/CSS/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav>
+            <h3 class="link"><a href="#table">Table</a></h3>
+            <h3 class="link"><a href="#image">Image</a></h3>
+            <h3 class="link"><a href="#video">Video</a></h3>
+        </nav>
+        <header>
+            <h1>Dale's Cheat Sheet</h1>
+        </header>
+        <main>
+            <div class="headings" id="table">
+                <h2>Table</h2>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Components</th>
+                            <th>Behaviour</th>
+                            <th>Code</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col1">Block</td>
+                            <td class="col2">Acts as a whole block</td>
+                            <td class="col3">width <br> 
+                                height</td>
+                            <td><p>Padding, margin and border will cause other elements to be pushed away from the box.
+                                If width is not specified, the box will extend in the inline direction to fill the space available in its container. In most cases, the box will become as wide as its container, filling up 100% of the space available</p></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Standard Box</td>
+                            <td class="col2">Size adds border, padding</td>
+                            <td class="col3">n/a</td>
+                            <td><p>The box will keep getting bigger and smaller as you make changes</p></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Border Box</td>
+                            <td class="col2">Keeps box size static</td>
+                            <td class="col3"><p>.box {<br>
+                                box-sizing: border-box;<br>
+                            }</p></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Margin</td>
+                            <td class="col2">Invisible space around box that pushes other elements away</td>
+                            <td class="col3">margin-top <br>
+                                margin-right <br>
+                                margin-bottom <br>
+                                margin-left <br>
+                                px, em, rem
+                            </td>
+                            <td><p>You can also use <i>auto</i> to horizontally center. Can use positive or negative</p></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Border</td>
+                            <td class="col2">Drawn between margin and padding</td>
+                            <td class="col3">border-top <br>
+                                border-right <br>
+                                border-bottom <br>
+                                border-left <br>
+                                border-width <br>
+                                border-style <br>
+                                border-color <br>
+                                border-top-width <br>
+                                border-top: 5px dotted green;
+                            </td>
+                            <td><p> Can manipulate each side of the border, or the whole border</p></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Padding</td>
+                            <td class="col2">Pushes content away from border</td>
+                            <td class="col3">padding-top <br>
+                                padding-right <br>
+                                padding-bottom <br>
+                                padding-left
+                            </td>
+                            <td><p>Cannot have negative padding</p></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Display</td>
+                            <td class="col2">Sets how an element is treated</td>
+                            <td class="col3">eg. display: inline-block;</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Position: 'Static'</td>
+                            <td class="col2">Keeps in normal flow</td>
+                            <td class="col3">position: static;</td>
+                            <td><p>The top, right, bottom, left, and z-index properties have no effect. This is the default value</p></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Position: 'Relative'</td>
+                            <td class="col2">Set in normal flow, but positioned offset to itself</td>
+                            <td class="col3">top: 20px;<br>
+                                right: -20px; <br>
+                                bottom: <br>
+                                left: <br>
+                            </td>
+                            <td><p>Reserves space that it left behind. Will overlay other elements</p></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Position: 'Absolute'</td>
+                            <td class="col2">Removed from normal flow and positioned relative to closest <b>positioned</b> ancestor.</td>
+                            <td class="col3">top: 20px;<br>
+                                right: -20px; <br>
+                                bottom: <br>
+                                left: <br></td>
+                            <td><p>No space reserved</p></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Position: 'Fixed'</td>
+                            <td class="col2">Removed from normal flow and positioned to initial containing block</td>
+                            <td class="col3">top: 20px;<br>
+                                right: -20px; <br>
+                                bottom: <br>
+                                left: <br></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Position: 'Sticky'</td>
+                            <td class="col2">Remains in normal flow, but offset relative to nearest <i>scrolling ancestor</i></td>
+                            <td class="col3">top: 20px;<br>
+                                right: -20px; <br>
+                                bottom: <br>
+                                left: <br></td>
+                            <td><p>sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when overflow is hidden, scroll, auto, or overlay), even if that ancestor isn't the nearest actually scrolling ancestor</p></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">z-index</td>
+                            <td class="col2">Orders overlapping positioned elements</td>
+                            <td class="col3">z-index: 3;</td>
+                            <td><p>Any integer, positive or negative. The higher number, the greater the priority</p></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">Overflow</td>
+                            <td class="col2">Sets desired behavior when content doesn't fit</td>
+                            <td class="col3"overflow: visible; <br>
+                                overflow: hidden; <br>
+                                overflow: scroll; <br>
+                            </td>
+                            <td><p>Visible = default. Hidden cuts off content. Scroll enables scrolling of content</p></td>
+                        </tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="headings" id="image">
+                <h2>Image</h2>
+            </div>
+            <div class="box">
+                <img src="https://www.lilengine.co/sites/default/files/inline-images/Screen%20Shot%202019-04-14%20at%2023.59.07.png" alt="box model" id="boximage">
+            </div>
+            <div class="headings" id="video">
+                <h2>Video</h2>
+            </div>
+            <div class="vidbox">
+                <iframe class="vid" src="https://www.youtube.com/embed/rIO5326FgPE"></iframe>
+            </div>            
+        </main>
+
+    </body>
+</html>
